@@ -1,0 +1,13 @@
+#Venkata-Gautam Kanumuru, vrk7bp, Makefile, April 22nd, 2013
+
+#This Makefile uses the | character to "run" two commands at once, the compile and the doxygen command.
+
+CXX = g++ -O2 -lrt
+CPP = middleearth.cpp traveling.cpp
+
+.SUFFIXES: .o .cpp
+
+topological: $(CPP)
+	$(CXX) $(CPP) | doxygen
+	
+	
